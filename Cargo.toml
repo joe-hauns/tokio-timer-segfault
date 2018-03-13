@@ -1,0 +1,7 @@
+[package]
+name = "tokio-timer-segfault"
+version = "0.1.0"
+authors = ["Johannes Schoisswohl <johannes.sch@gmx.net>"]
+
+[dependencies]
+tokio-timer = "0.1"
