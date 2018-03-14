@@ -15,7 +15,7 @@ System:
 * macOS 10.13.3
 
 
-While debugging I found out that the error can be avoided when inserting a print-statement after line 248 in the file `tokio-timer/src/wheel.rs`. By inserting `println!`s I also found out that the segfault occurs somewhere within the loop.
+While debugging I found out that the error can be avoided when inserting a `print!`-statement after line 248 in the file `tokio-timer/src/wheel.rs`. By inserting `println!`s I also found out that the segfault occurs somewhere within the loop.
 ```
 
     /// Returns the instant in time that corresponds to the next timeout
