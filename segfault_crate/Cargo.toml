@@ -1,7 +1,6 @@
 [package]
-name = "tokio-timer-segfault"
+name = "segfault_crate"
 version = "0.1.0"
 authors = ["Johannes Schoisswohl <johannes.sch@gmx.net>"]
 
 [dependencies]
-segfault_crate = { path = "segfault_crate" }

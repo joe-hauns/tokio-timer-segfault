@@ -1,23 +1,19 @@
-extern crate tokio_timer;
-use tokio_timer::*;
-use tokio_timer as builder;
-use tokio_timer::wheel;
+extern crate segfault_crate;
 
-use std::time::Instant;
-use builder::Builder;
-use wheel::{Wheel, Slot, Token, EMPTY};
+mod segfault_mod;
 
 fn main() {
-    let wheel = Wheel::new(&Builder {
-        tick_duration: None,
-        num_slots: None,
-        initial_capacity: None,
-        max_capacity: None,
-        max_timeout: None,
-        channel_capacity: None,
-        thread_name: None,
-    });
-    wheel.next_timeout();
+    let num_slots = 4096;
+
+    println!("running segfault module ...");
+    let wheel = vec![ None ; num_slots];
+    segfault_mod::next_timeout(&wheel);
+    println!("ok");
+
+    println!("running seqfault crate ...");
+    let wheel = vec![ None ; num_slots];
+    segfault_crate::next_timeout(&wheel);
+    println!("ok");
 }
 
 
