@@ -19,4 +19,3 @@ pub fn next_timeout(wheel: &Vec<Option<Instant>>) -> Option<Instant> {
 
     min.map(|t| *t)
 }
-
