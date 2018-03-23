@@ -4,4 +4,6 @@ version = "0.1.0"
 authors = ["Johannes Schoisswohl <johannes.sch@gmx.net>"]
 
 [dependencies]
-tokio-timer = "0.1"
+tokio-timer = { path = "tokio-timer" }
+#futures = "0.1"
+#slab = "0.3.0"
